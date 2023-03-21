@@ -68,4 +68,5 @@ def main():
         assert(np.allclose(np.matmul(M, X), Y))
         print("done {}".format(i))
 
-main()
+if __name__ == "__main__":
+    main()

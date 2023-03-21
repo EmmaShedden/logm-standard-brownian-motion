@@ -13,9 +13,15 @@ This repository contains:
 
 ### Python Requirements
 - Support: `python3`, `ipynb`
-- Packages: `numpy`, `matplotlib`, `scikit`, `scipy`
+- Packages: `numpy`, `matplotlib`, `scipy`
 - Visualization: Graphics are not supported by default on WSL; this may be an issue on other setups as well. To be able to generate graphs and other visualizations, it may be necessary to set up X-11 forwarding. Consider XLaunch from SourceForge via [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
-- For a detailed installation guide, see below (TODO).
+
+### Python installation
+1. Follow [this guide](https://wiki.python.org/moin/BeginnersGuide/Download) to install Python 3.
+2. To work with `.ipynb` files, I recommend Google Colab for minimal setup. However, you can alternatively install Jupyter by following [this guide](https://jupyter.org/install) or  Jupyter Lab by following [this guide](https://jupyter.org/install).
+3. In your command line, run `pip install numpy matplotlib scipy`. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3 install` instead.
+4. If you use WSL/WSL2 on Windows and do not have X-11 forwarding previously set up, follow [this guide](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
+    - Any commands that attempt to display graphics will hang if this is not set up, so if you don't care about generating your own graphs and don't want to bother with X-11 forwarding, make sure to comment out any instances of `plt.show()` or `plt.save()` in the Python code.
 
 ### MATLAB Requirements (TODO)
 
