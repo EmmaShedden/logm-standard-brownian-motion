@@ -13,17 +13,18 @@ This repository contains:
 
 ### Python Requirements
 - Language version: Any version of Python 3 should work fine.
-- Packages: `numpy`, `matplotlib`, `scipy`
+- Packages: `numpy`, `matplotlib`, `scipy`, `pandas`
 - Visualization: Graphics are not supported by default on WSL; this may be an issue on other setups as well. To be able to generate graphs and other visualizations, it may be necessary to set up X-11 forwarding. Consider XLaunch from SourceForge via [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
 
 ### Python installation
+For `.py` files.
 1. Follow [this guide](https://wiki.python.org/moin/BeginnersGuide/Download) to install Python 3.
 2. In your command line, run `pip install numpy matplotlib scipy`. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3 install` instead.
 3. If you use WSL/WSL2 on Windows and do not have X-11 forwarding previously set up, follow [this guide](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
     - Any commands that attempt to display graphics will hang if this is not set up, so if you don't care about generating your own graphs and don't want to bother with X-11 forwarding, make sure to comment out any instances of `plt.show()` or `plt.save()` in the Python code.
 
-### Jupyter Notebook Requirements
-- For `.ipynb` files
+### Jupyter Notebook Installation
+For `.ipynb` files.
 
 #### Option 1: Google Colab
 1. Upload `.ipynb` files to Google Colab.
@@ -37,9 +38,9 @@ This repository contains:
 #### Option 3: Jupyter (in your regular IDE)
 1. Install Jupyter by following [this guide](https://jupyter.org/install).
 2. If you use WSL/WSL2 on Windows, you likely need to install [VSCode Insiders](https://code.visualstudio.com/insiders/), since standard VSCode doesn't support Jupyter notebooks out of the box. 
-    a) Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
-    b) If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
-3. 
+    - Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
+    - If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
+3. Code is ready to edit/run in VSCode Insiders.
 
 ### MATLAB Requirements (TODO)
 
@@ -63,6 +64,6 @@ In development.
 ### TODOs (Emma)
 - [ ] rename files
 - [x] get other stuff from Google Colab
-- [ ] fix formatting & comments
+- [x] fix formatting & comments
 - [ ] all documentation
 - [ ] reorganize directory tree according to what simulation methods they're used for
