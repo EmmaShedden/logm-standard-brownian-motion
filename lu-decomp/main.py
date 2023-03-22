@@ -17,7 +17,6 @@ def lu(M, n, m):
 def solve_lower(M, Y, n):
     X = np.zeros(n, dtype=float)
     for i in range(n): # iterate over rows
-        # sum{j < i} M[i][j] * X[j] + M[i][i] * X[i] = Y[i]
         X[i] = Y[i] - np.sum(M[i] * X)
     return X
 
@@ -25,7 +24,6 @@ def solve_lower(M, Y, n):
 def solve_upper(M, Y, n, m):
     X = np.zeros(m, dtype=float)
     for i in range(min(n, m)-1, -1, -1): # iterate over rows backwards
-        # sum{j > i} M[i][j] * X[j] + M[i][i] * X[i] = Y[i]
         num = Y[i] - np.sum(M[i] * X)
         if M[i][i] == 0 and num == 0:
             print("Infinite solutions: X[{}] can be anything".format(i))
@@ -34,7 +32,7 @@ def solve_upper(M, Y, n, m):
         else:
             X[i] = num / M[i][i]
     
-    # if the matrix is tall (n > m), we must check the rest of the rows
+    # If the matrix is tall (n > m), we must check the rest of the rows
     # for consistency with our solution
     for i in range(m, n):
         if not np.allclose(M[i] * X, Y[i]):
@@ -43,28 +41,41 @@ def solve_upper(M, Y, n, m):
     return X
 
 def main():
-    # example
+    # Hardcoded example linear system that we know the expected output for
     M = np.array([[6, 18, 3], [2, 12, 1], [4, 15, 3]], dtype=float)
-    L, U = lu(M, 3, 3)
     Y = np.array([3, 19, 0], dtype=float)
+
+    # First, find the LU Decomposition of M
+    L, U = lu(M, 3, 3)
+
+    # Second, use this decomposition to solve the system MX=Y for X
+    # more efficiently than a naive approach
     W = solve_lower(L, Y, 3)
     X = solve_upper(U, W, 3, 3)
     assert(np.allclose(np.matmul(M, X), Y))
     print("done")
 
-    # tests
-    N = 100
+    # Test on linear systems with randomly generated dimensions and values
+    N = 100 # range of values of coefficients in the system
     for i in range(1000):
+        # Generate a nxm matrix M where 3 <= n <= 9 and n-1 <= m <= n+2
+        # The values in the matrix and vector are between -N and N
         n = np.random.randint(3, 10)
         m = np.random.randint(n-1, n+3)
         M = np.random.randint(-N, N, size=(n, m)).astype(float)
+        Y = np.random.randint(-N, N, size=(n,)).astype(float)
+
+        # Find the LU Decomposition of M
         L, U = lu(M, n, m)
         assert(np.allclose(np.matmul(L, U), M))
-        Y = np.random.randint(-N, N, size=(n,)).astype(float)
+
+        # Use this decomposition to solve the system MX=Y for X
         W = solve_lower(L, Y, n)
         assert(np.allclose(np.matmul(L, W), Y))
         X = solve_upper(U, W, n, m)
         assert(np.allclose(np.matmul(U, X), W))
+
+        # Check that it worked
         assert(np.allclose(np.matmul(M, X), Y))
         print("done {}".format(i))
 

@@ -12,16 +12,34 @@ This repository contains:
 ## Installation
 
 ### Python Requirements
-- Support: `python3`, `ipynb`
+- Language version: Any version of Python 3 should work fine.
 - Packages: `numpy`, `matplotlib`, `scipy`
 - Visualization: Graphics are not supported by default on WSL; this may be an issue on other setups as well. To be able to generate graphs and other visualizations, it may be necessary to set up X-11 forwarding. Consider XLaunch from SourceForge via [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
 
 ### Python installation
 1. Follow [this guide](https://wiki.python.org/moin/BeginnersGuide/Download) to install Python 3.
-2. To work with `.ipynb` files, I recommend Google Colab for minimal setup. However, you can alternatively install Jupyter by following [this guide](https://jupyter.org/install) or  Jupyter Lab by following [this guide](https://jupyter.org/install).
-3. In your command line, run `pip install numpy matplotlib scipy`. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3 install` instead.
-4. If you use WSL/WSL2 on Windows and do not have X-11 forwarding previously set up, follow [this guide](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
+2. In your command line, run `pip install numpy matplotlib scipy`. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3 install` instead.
+3. If you use WSL/WSL2 on Windows and do not have X-11 forwarding previously set up, follow [this guide](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
     - Any commands that attempt to display graphics will hang if this is not set up, so if you don't care about generating your own graphs and don't want to bother with X-11 forwarding, make sure to comment out any instances of `plt.show()` or `plt.save()` in the Python code.
+
+### Jupyter Notebook Requirements
+- For `.ipynb` files
+
+#### Option 1: Google Colab
+1. Upload `.ipynb` files to Google Colab.
+2. Uncomment all "for Google Colab" lines in the code (mainly Colab-specific imports).
+3. Code is ready to edit/run. Note that output files are saved into the Colab filesystem.
+
+#### Option 2: Jupyter Lab
+1. Follow [this guide](https://jupyter.org/install) to install Jupyter Lab.
+2. Code is ready to edit/run in the Jupyter Lab IDE. You may need to copy the files into Jupyter Lab.
+
+#### Option 3: Jupyter (in your regular IDE)
+1. Install Jupyter by following [this guide](https://jupyter.org/install).
+2. If you use WSL/WSL2 on Windows, you likely need to install [VSCode Insiders](https://code.visualstudio.com/insiders/), since standard VSCode doesn't support Jupyter notebooks out of the box. 
+    a) Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
+    b) If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
+3. 
 
 ### MATLAB Requirements (TODO)
 
