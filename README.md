@@ -16,20 +16,50 @@ This repository contains:
 - Packages: `numpy`, `matplotlib`, `scipy`, `pandas`
 - Visualization: Graphics are not supported by default on WSL; this may be an issue on other setups as well. To be able to generate graphs and other visualizations, it may be necessary to set up X-11 forwarding. Consider XLaunch from SourceForge via [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
 
+Note for installation: Throughout, you may need to replace `pip` with `pip3` depending on your setup. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3` instead.
+
+Note for installation: Only tested in WSL2 on VSCode so far, but should work on any other setup.
+
 ### Python installation
 For `.py` files.
 1. Follow [this guide](https://wiki.python.org/moin/BeginnersGuide/Download) to install Python 3.
-2. In your command line, run `pip install numpy matplotlib scipy`. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3 install` instead.
+2. In your command line, run `pip install numpy matplotlib scipy`.
 3. If you use WSL/WSL2 on Windows and do not have X-11 forwarding previously set up, follow [this guide](https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2).
     - Any commands that attempt to display graphics will hang if this is not set up, so if you don't care about generating your own graphs and don't want to bother with X-11 forwarding, make sure to comment out any instances of `plt.show()` or `plt.save()` in the Python code.
 
 ### Jupyter Notebook Installation
 For `.ipynb` files.
 
+#### Option 0 (preferred): Jupyter (in browser)
+In the command line:
+1. Navigate to the top level of the repository.
+2. Run `pip install conda` if you don't already have it.
+3. Run `conda env list`. You should see a `base` environment with a filepath.
+4. Run `source [path-to-base]/bin/activate` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
+5. Run `pip install ipykernel ipython jupyter jupyterlab`.
+6. Run `pip install -U "jupyter-server<2.0.0"`.
+7. Run `jupyter notebook`. Check for errors in the output and follow any instructions (e.g. missing packages) depending on your setup. You may need to repeat this command multiple times until all errors are resolved.
+    - If you use WSL/WSL2 on Windows, run `jupyter notebook --port=8889 --no-browser` instead.
+    - You can safely ignore any prompts related to upgrading to Notebook 7.
+8. At the end of the output from the previous command, there will be a block of text like the following. Follow the instructions to open the project directory in Jupyter.
+```
+[C 22:32:19.671 NotebookApp]
+
+To access the notebook, open this file in a browser:
+    file:///home/emshedde/.local/share/jupyter/runtime/nbserver-15057-open.html
+Or copy and paste one of these URLs:
+    http://localhost:8889/?token=7a40b78e800ac1574c7435815ccb54497ac50eaac846db92
+    or http://127.0.0.1:8889/?token=7a40b78e800ac1574c7435815ccb54497ac50eaac846db92
+```
+9. Code is ready to edit/run within the browser.
+    
+Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-virtual-environment-vs-code-kernels/).
+
 #### Option 1: Google Colab
 1. Upload `.ipynb` files to Google Colab.
 2. Uncomment all "for Google Colab" lines in the code (mainly Colab-specific imports).
-3. Code is ready to edit/run. Note that output files are saved into the Colab filesystem.
+3. Code is ready to edit/run in Colab. Note that output files are saved into the Colab filesystem.
+    - If you wish to save output, you may need to select the option to mount your Google Drive on the left sidebar.
 
 #### Option 2: Jupyter Lab
 1. Follow [this guide](https://jupyter.org/install) to install Jupyter Lab.
@@ -40,7 +70,8 @@ For `.ipynb` files.
 2. If you use WSL/WSL2 on Windows and VSCode, you likely need to install [VSCode Insiders](https://code.visualstudio.com/insiders/), since standard VSCode doesn't support Jupyter notebooks out of the box. 
     - Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
     - If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
-3. Code is ready to edit/run in VSCode Insiders.
+    - If the prompt to select a kernel hangs, double-check that your `python`, `iPython`, and `ipykernel` installations worked and have the versions you expect. You may need to uninstall, reinstall and upgrade them. Then, click on the WSL-Ubuntu icon in the bottom left corner -> Connect to WSL using Distro -> Select the default distro -> Navigate to the top level of the repository and open it.
+3. Code is ready to edit/run in VSCode via the `code` command (or VSCode Insiders via the `code-insiders` command).
 
 ### MATLAB Requirements
 
