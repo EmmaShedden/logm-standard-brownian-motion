@@ -8,6 +8,7 @@ This repository contains:
 - Implementations of useful algorithms (Python, MATLAB) which our simulations rely on for efficiency over naive approaches.
     - Tests of these implementations against standard library implementations in Scikit and Numpy.
     - These are for learning purposes; the standard library functions are used in our simulation code.
+- All installation and usage instructions start in the command line at the top level of this repository.
 
 ## Installation
 
@@ -31,16 +32,17 @@ For `.py` files.
 For `.ipynb` files.
 
 #### Option 0 (preferred): Jupyter (in browser)
-In the command line:
-1. Navigate to the top level of the repository.
-2. Run `pip install conda` if you don't already have it.
-3. Run `conda env list`. You should see a `base` environment with a filepath.
-4. Run `source [path-to-base]/bin/activate` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
-5. Run `pip install ipykernel ipython jupyter jupyterlab`.
+##### First time setup:
+1. Run `pip install conda` if you don't already have it.
+2. Run `conda env list`. You should see a `base` environment with a filepath.
+3. Run `conda activate base` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
+4. Run `pip install ipykernel ipython jupyter jupyterlab`.
+5. Run `python3 -m ipykernel install --user --name=[choose-a-name-related-to-this-project]`. This starts a python kernel, using the current virtual environment, for the  Jupyter notebook to connect to.
 6. Run `pip install -U "jupyter-server<2.0.0"`.
 7. Run `jupyter notebook`. Check for errors in the output and follow any instructions (e.g. missing packages) depending on your setup. You may need to repeat this command multiple times until all errors are resolved.
     - If you use WSL/WSL2 on Windows, run `jupyter notebook --port=8889 --no-browser` instead.
     - You can safely ignore any prompts related to upgrading to Notebook 7.
+    - You can safely ignore most warnings.
 8. At the end of the output from the previous command, there will be a block of text like the following. Follow the instructions to open the project directory in Jupyter.
 ```
 [C 22:32:19.671 NotebookApp]
@@ -52,7 +54,18 @@ Or copy and paste one of these URLs:
     or http://127.0.0.1:8889/?token=7a40b78e800ac1574c7435815ccb54497ac50eaac846db92
 ```
 9. Code is ready to edit/run within the browser.
-    
+
+##### Subsequent use:
+1. Run `conda activate base` to activate the virtual environment. If you created a different venv for this project, activate that (you can check what venvs are available using `conda env list`).
+2. Run `jupyter notebook`.
+    - Again, if you use WSL/WSL2 on Windows, run `jupyter notebook --port=8889 --no-browser` instead.
+3. Follow the instructions to open the project directory in Jupyter.
+
+##### Ending the session:
+1. When you're done, make sure to save changes (upper left corner). Close the browser window and return to the command line.
+2. Type `Ctrl + C`, then `y` to terminate the Jupyter session.
+3. Run `conda deactivate` to deactivate the virtual environment.
+
 Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-virtual-environment-vs-code-kernels/).
 
 #### Option 1: Google Colab
@@ -107,7 +120,7 @@ All instructions begin in the command line at the top level of the repo.
 5. If you choose to store the output graphs, they can be found in `[path-to-repo]/random-walk/output/`. You can view them in your IDE or any image viewer.
     - Extra information on how to interpret output graphs can be found in inline comments in the code.
 
-<p align="center"><img width="600" src="/random-walk/output/brownian-motion/one-plot.png"></p>
+<p align="center"><img width="700" src="/random-walk/output/brownian-motion/one-plot.png"></p>
 
 ### Instructions (TODO: remove)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
