@@ -46,6 +46,7 @@ For `.ipynb` files.
 
 - For `.m` files
 - Language version: R2018a and later versions should work fine.
+- Note all MATLAB files follow [this style guide](https://sites.google.com/site/matlabstyleguidelines/naming-conventions/variables).
 
 ### MATLAB Installation
 
