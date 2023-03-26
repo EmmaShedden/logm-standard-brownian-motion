@@ -42,24 +42,25 @@ For `.ipynb` files.
     - If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
 3. Code is ready to edit/run in VSCode Insiders.
 
-### MATLAB Requirements (TODO)
+### MATLAB Requirements
 
--Language version: R2018a and later versions should work fine.
+- For `.m` files
+- Language version: R2018a and later versions should work fine.
 
 ### MATLAB Installation
-For `.m` files.
-Login to [this website](https://www.mathworks.com/downloads/) and download the desired version.
-    - If you are affiliated with an educational institution, you might have been granted a license for downloading. Remember to use the email address of that institution when logging. Otherwise, you need to select a license when downloading it to your desktop. You can either buy a license on [this official website](https://www.mathworks.com/pricing-licensing.html?s_tid=srchtitle_license_1) or apply for a 30-day free trial [here](https://www.mathworks.com/campaigns/products/trials.html).
-    - You would be asked to select the products you need when downloading. It would be enough for our program to only select `MATLAB`.
+
+Login to [Mathworks](https://www.mathworks.com/downloads/) and download the desired version.
+- If you are affiliated with an educational institution, you might have been granted a license for downloading. Remember to use the email address of that institution when logging in. Otherwise, you need to select a license when downloading it to your desktop. You can either [buy a license](https://www.mathworks.com/pricing-licensing.html?s_tid=srchtitle_license_1) or [apply for a 30-day free trial](https://www.mathworks.com/campaigns/products/trials.html) on the official website.
+- You will be asked to select the products you need when downloading. It will be enough for this repo to only select MATLAB.
 
 ## Usage (TODO)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
-If you encounter any trouble running our program, you can email the followings:
-    - xiaoranc@umich.edu
-    - lesteven@umich.edu
-    - emshedde@umich.edu 
+If you encounter trouble running our code, you can email the following:
+- xiaoranc@umich.edu
+- lesteven@umich.edu
+- emshedde@umich.edu 
 
 ## Authors and acknowledgment
 __Authors:__ Xiaoran Chen, Seok Jin Lee, & Emma Shedden
