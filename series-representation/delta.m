@@ -1,4 +1,4 @@
-% Effect: Create a piecewise function
+% Effect: Create a piecewise function Delta(t)
 function out = delta(t) % Original function Delta(t)
   flag1 = [0 <= t, t < 1/2];
   flag2 = [1/2 <= t, t <= 1];

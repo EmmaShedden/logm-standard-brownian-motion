@@ -1,26 +1,20 @@
-% Algorithm:
-% 1. We refer to the expression X_t = \sum_{n=0}^{\infty} \lambda_n * Z_n *
-% \Delta_n(t) in which \lambda_n is a constant as a funtion of n, Z_n is a
-% standard Gaussian variable, \Delta_n(t) is a function of t differ by n
-% 2. We only simulate X_t for finite summands
-% 3. We dicretize the time interval [0,1] and only simulate X_t on a set of
-% timestamps
-% 4. We draw the plot of X_t with respect to t
-
 % Require: 
 % Effect: Simulate the standard Brownian motion with N summands 
 function simulation(N)
 
+% Compute lambda_n
 lambda = @(n) (1/2) * 2^(-largest(n)/2); % Compute lambda as a function of n
 lambda_n = zeros(1,N); 
 for n = 1 : N
   lambda_n(n) = lambda(n); % Compute lambda_n for each n
 end
 
+% Compute Z_n
 x = linspace(0,1,1000); % Dicretize the interval [0,1]
 y = zeros(1,1000); % Variable y records the results of the summations at each x
 Z = randn(1,N+1); % Generate a standard Gaussin vector
 
+% Multiplication and Summation
 for i = 1 : length(x)
     summand = zeros(1,N);
     for j = 1 : N
