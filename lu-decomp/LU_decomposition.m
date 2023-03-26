@@ -1,12 +1,3 @@
-% Algorithm:
-% 1. Each nonsigular square matrix can be diagonalized by row operations and
-% column operations (i.e. exists a lower triangular matrix L', a upper
-% triangular matrix U' s.t. L' * A * U' = D)
-% 2. Given that the inverse of a lower triangular matrix is still a lower
-% triangular matrix, so does upper triangular matrix, L'^{-1} is the desired
-% lower triangular matrix for LU decomposition and D * U'^{-1} is the
-% desired upper triangular matrix
-
 % Require: A is a nonsingular square matrix 
 % Effect: if A has LU decomposition, return the lower triangular matrix L
 % and the upper triangular matirx U; otherwise, return L,U as "undefined"
@@ -28,16 +19,6 @@ if hasLUDecop == 1
     rowOperMat = diag(ones(1,sizeA(1))); % Record all row operation matrices
     colOperMat = diag(ones(1,sizeA(1))); % Record all column operation matrices
     for i = 1 : sizeA(1)-1
-        % For each i, we want to use A(i,i) to zeros out the ith row and
-        % ith column respectively
-
-        % No worries for A(i,i) = 0 since all the leading principal submatrices 
-        % are nonsingular, once A(i,i) zeros out the ith row and the ith co
-        % lumn, the (i+1)th leading principal submatrix is all zeros except
-        % for the diagonal consisting of A(1,1) - A(i+1,i+1).
-        % All former operations can be viewed as row, column operations on
-        % the (i+1)th leading principal submatrix which won't affect the
-        % nonsingularity, therefore, A(i+1,i+1) ~= 0 
         rowMat = diag(ones(1,sizeA(1))); % Record row operation matrix for each i
         colMat = diag(ones(1,sizeA(1))); % Record column operation matrix for each i
         
