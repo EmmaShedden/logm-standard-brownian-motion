@@ -24,3 +24,4 @@ in which
 
 ### Remark
 - We only simulate $X_t$ for finite summands
+- We dicretize the time interval [0,1] and only simulate $X_t$ on a set of timestamps
