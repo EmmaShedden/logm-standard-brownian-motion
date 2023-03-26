@@ -57,7 +57,7 @@ Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-v
 
 #### Option 1: Google Colab
 1. Upload `.ipynb` files to Google Colab.
-2. Uncomment all "for Google Colab" lines in the code (mainly Colab-specific imports).
+2. Set the boolean flag `colab` to `True`.
 3. Code is ready to edit/run in Colab. Note that output files are saved into the Colab filesystem.
     - If you wish to save output, you may need to select the option to mount your Google Drive on the left sidebar.
 
@@ -86,6 +86,30 @@ Login to [Mathworks](https://www.mathworks.com/downloads/) and download the desi
 - You will be asked to select the products you need when downloading. It will be enough for this repo to only select MATLAB.
 
 ## Usage (TODO)
+Usage instructions for all programs within this repository. Make sure you have completed the relevant installation for the files you want to run.
+
+All instructions begin in the command line at the top level of the repo.
+
+### LU Decomposition in Python
+1. Run `cd lu-decomp/`.
+2. Run `python main.py`.
+    - Depending on your setup, you might need to run `python3` instead.
+3. The code first tests the output LU decomposition of a hardcoded matrix, then on randomly generated matrices. Not every matrix has an LU decomposition; when our algorithm cannot find one, it raises an exception. Therefore, the output will reflect the number of randomly generated matrices which admitted LU decompositions (this will be different every time you run the program), and end in an exception.
+    - The test suite includes both square and rectangular matrices, but we restrict the difference between dimensions because very tall or wide matrices are unlikely to have LU decompositions.
+4. To change the test code, open `main.py` in an editor and scroll down to the definition of `main()`. Here, you can change the values of the hardcoded matrix, add more hardcoded tests, or change the parameters of random matrix generation.
+
+### Random Walk in Python
+1. Run `cd random-walk`.
+2. Refer to the instructions for your choice of installation in order to open `main.ipynb`.
+3. Change any settings you wish in the cell at the top of the file. You can choose whether to display and/or store the output graphs, and how long to run the simulations.
+4. In the top menu selection, find __Kernel__ and select __Restart & Run All__.
+    - Note that the generation of the simulation images for the 2D random walk takes several minutes depending on the length of the simulation. This is normal.
+5. If you choose to store the output graphs, they can be found in `[path-to-repo]/random-walk/output/`. You can view them in your IDE or any image viewer.
+    - Extra information on how to interpret output graphs can be found in inline comments in the code.
+
+<p align="center"><img width="600" src="/random-walk/output/brownian-motion/one-plot.png"></p>
+
+### Instructions (TODO: remove)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
