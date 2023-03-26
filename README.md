@@ -37,7 +37,7 @@ For `.ipynb` files.
 
 #### Option 3: Jupyter (in your regular IDE)
 1. Install Jupyter by following [this guide](https://jupyter.org/install).
-2. If you use WSL/WSL2 on Windows, you likely need to install [VSCode Insiders](https://code.visualstudio.com/insiders/), since standard VSCode doesn't support Jupyter notebooks out of the box. 
+2. If you use WSL/WSL2 on Windows and VSCode, you likely need to install [VSCode Insiders](https://code.visualstudio.com/insiders/), since standard VSCode doesn't support Jupyter notebooks out of the box. 
     - Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
     - If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
 3. Code is ready to edit/run in VSCode Insiders.
