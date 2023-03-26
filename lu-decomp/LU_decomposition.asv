@@ -61,11 +61,11 @@ if hasLUDecop == 1
 
     L = inv(rowOperMat(:,:,sizeA(1))); % Compute the inverse of the last row operation matrix
     U = A/(colOperMat(:,:,sizeA(1))); % Compute the product of the diagonal matrix and the 
-                                      % inverse of the last column operation matrix
+                                      % inverse of the last row operation matrix
 
     for i = sizeA(1)-1 : 2
-        L = rowOperMat(:,:,i)\L; % Multiply L by the inverse of the row operation matrix on by one
-        U = U/colOperMat(:,:,i); % Multiply U by the inverse of the column operation matrix on by one
+        L = rowOperMat(:,:,i)\L;
+        U = U/colOperMat(:,:,i);
     end
 else
     L = "undefined";
