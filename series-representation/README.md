@@ -18,5 +18,4 @@ in which
 0 & otherwise
 \end{cases}\\
 \Delta_n(t) = \Delta(2^j t - k) \text{for} n = 2^j + k, \text{where} i \ge 0 \text{and} 0 \le k < 2^j
-\end{enumerate}
 ```
