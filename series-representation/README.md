@@ -11,11 +11,16 @@ X_t = \sum\limits_{n=0}^{\infty} \lambda_n Z_n \Delta_n(t)\\
 ```
 in which 
 ```math
-\lambda_n = \frac{1}{2}2^{-\frac{j}{2}} \quad \text{where} \quad n \ge 1 \quad \text{and} \quad n = 2^j + k \quad \text{with} \quad 0 \le k < 2^j.\\
+\lambda_n = \frac{1}{2}2^{-j/2} \quad \text{where} \quad n \ge 1 \quad \text{and} \quad n = 2^j + k \quad \text{with} \quad 0 \le k < 2^j.\\
 \Delta(t) = \begin{cases}
 2t & 0 \le t < \frac{1}{2}\\
 2(1-t) & \frac{1}{2} \le t < 1\\
 0 & \text{otherwise}
 \end{cases}\\
-\Delta_n(t) = \Delta(2^j t - k) \text{for} n = 2^j + k, \quad \text{where} \quad i \ge 0 \quad \text{and} \quad 0 \le k < 2^j
+\Delta_n(t) = \Delta(2^j t - k) \quad \text{for} \quad n = 2^j + k, \quad \text{where} \quad i \ge 0 \quad \text{and} \quad 0 \le k < 2^j
 ```
+
+## Realization
+
+### Remark
+- We only simulate $X_t$ for finite summands
