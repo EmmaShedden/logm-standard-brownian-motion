@@ -11,12 +11,12 @@ X_t = \sum\limits_{n=0}^{\infty} \lambda_n Z_n \Delta_n(t)\\
 ```
 in which 
 ```math
-\begin{enumerate}
-\item \lambda_n = \frac{1}{2}2^{-\frac{j}{2}} \text{where} n \ge 1 \text{and} n = 2^j + k with 0 \le k < 2^j.\\
-\item \Delta(t) = \begin{cases}
+\lambda_n = \frac{1}{2}2^{-\frac{j}{2}} \text{where} n \ge 1 \text{and} n = 2^j + k with 0 \le k < 2^j.\\
+\Delta(t) = \begin{cases}
 2t & 0 \le t < \frac{1}{2}\\
 2(1-t) & \frac{1}{2} \le t < 1\\
 0 & otherwise
 \end{cases}\\
+\Delta_n(t) = \Delta(2^j t - k) \text{for} n = 2^j + k, \text{where} i \ge 0 \text{and} 0 \le k < 2^j
 \end{enumerate}
 ```
