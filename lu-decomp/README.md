@@ -19,7 +19,7 @@ L=
 \begin{pmatrix}
 1 & 0 & 0 \\
 4 & 1 & 0 \\
-\frac{2}{3} & \frac{1}{2} & 1 \\
+7 & 2 & 1 \\
 \end{pmatrix}
 ```
 U=
