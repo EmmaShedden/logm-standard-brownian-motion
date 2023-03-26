@@ -4,8 +4,8 @@
 Brownian motion [[1](http://galton.uchicago.edu/~lalley/Courses/313/WienerProcess.pdf), [2](https://en.wikipedia.org/wiki/Brownian_motion)] is a mathematical model for a common physical process which occurs in both the natural world and man-made systems. Common examples include the diffusion of small particles in a liquid or gas (as studied by [Albert Einstein](https://www.aps.org/publications/apsnews/200502/history.cfm)) and the movement of certain economic indices (as studied by [Louis Bachelier](https://en.wikipedia.org/wiki/Louis_Bachelier)). Thus, the simulation of Brownian motions is useful to support understanding of the mathematical process and contribute to its wide-ranging applications.
 
 This repository contains:
-- Implementations of the Random Walk (Python, MATLAB) and Series Representation (MATLAB) simulation methods for standard Brownian motions.
-- Implementations of useful algorithms which our simulations rely on for efficiency over naive approaches.
+- Implementations of the Random Walk (Jupyter Notebook) and Series Representation (MATLAB) simulation methods for standard Brownian motions.
+- Implementations of useful algorithms (Python, MATLAB) which our simulations rely on for efficiency over naive approaches.
     - Tests of these implementations against standard library implementations in Scikit and Numpy.
     - These are for learning purposes; the standard library functions are used in our simulation code.
 
@@ -44,10 +44,22 @@ For `.ipynb` files.
 
 ### MATLAB Requirements (TODO)
 
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+-Language version: R2018a and later versions should work fine.
+
+### MATLAB Installation
+For `.m` files.
+Login to [this website](https://www.mathworks.com/downloads/) and download the desired version.
+    - If you are affiliated with an educational institution, you might have been granted a license for downloading. Remember to use the email address of that institution when logging. Otherwise, you need to select a license when downloading it to your desktop. You can either buy a license on [this official website](https://www.mathworks.com/pricing-licensing.html?s_tid=srchtitle_license_1) or apply for a 30-day free trial [here](https://www.mathworks.com/campaigns/products/trials.html).
+    - You would be asked to select the products you need when downloading. It would be enough for our program to only select `MATLAB`.
 
 ## Usage (TODO)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Support
+If you encounter any trouble running our program, you can email the followings:
+    - xiaoranc@umich.edu
+    - lesteven@umich.edu
+    - emshedde@umich.edu 
 
 ## Authors and acknowledgment
 __Authors:__ Xiaoran Chen, Seok Jin Lee, & Emma Shedden

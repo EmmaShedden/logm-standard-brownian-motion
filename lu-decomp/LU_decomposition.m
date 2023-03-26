@@ -1,4 +1,4 @@
-function [L,U] = LUDecomposition(A)
+function [L,U] = LU_decomposition(A)
 %Implement LU Decomposition
 %Call function:[L,U]=LUDecomposition(A)
 
@@ -6,7 +6,7 @@ function [L,U] = LUDecomposition(A)
 %Effect : if A has LU decomposition, return L,U; else return L,U as
 %"undefined"
 
-sz=size(A);
+sz = size(A);
 verify = 1; %test whether A has LU decomposition
 for i = 1 : sz(1)
     B = A(1:i,1:i);
@@ -19,11 +19,11 @@ end
 % principal submatrices are nonsingular.
 
 if verify ~= 0 
-    E=diag(ones(1,sz(1)));%record all row operation matrices
-    R=diag(ones(1,sz(1)));%record all column operation matrices
+    R_O = diag(ones(1,sz(1)));%record all row operation matrices
+    C_O = diag(ones(1,sz(1)));%record all column operation matrices
     for i = 1 : sz(1)-1
-        S=diag(ones(1,sz(1)));%record one row operation matrix
-        X=diag(ones(1,sz(1)));%record one column operation matrix
+        O_R = diag(ones(1,sz(1)));%record one row operation matrix
+        O_C = diag(ones(1,sz(1)));%record one column operation matrix
         %no worry A(i,i)=0
         %since all leading principal submatrices are nonsingular, after
         %A(i,i) zeros out the ith row and ith column, the (i+1)th leading
