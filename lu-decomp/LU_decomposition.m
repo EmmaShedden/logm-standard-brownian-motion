@@ -7,8 +7,8 @@
 % lower triangular matrix for LU decomposition and D * U'^{-1} is the
 % desired upper triangular matrix
 
-% Require : A is a nonsingular square matrix 
-% Effect : if A has LU decomposition, return the lower triangular matrix L
+% Require: A is a nonsingular square matrix 
+% Effect: if A has LU decomposition, return the lower triangular matrix L
 % and the upper triangular matirx U; otherwise, return L,U as "undefined"
 function [L,U] = LU_decomposition(A)
 
