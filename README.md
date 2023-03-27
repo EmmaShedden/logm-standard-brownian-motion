@@ -116,7 +116,7 @@ Usage instructions for all programs within this repository. Make sure you have c
 3. If A has a LU Decomposition, returns the lower triangular matrix L and the upper triangular matrix U for the LU decomposition of A; otherwise returns `undefined`.
 
 #### Example
-Input:\
+Input:
 
 ```math
 A=\begin{pmatrix}
@@ -125,7 +125,7 @@ A=\begin{pmatrix}
 7 & 8 & 9 \\
 \end{pmatrix}
 ```
-Output:\
+Output:
 
 ```math
 L=\begin{pmatrix}
