@@ -89,7 +89,7 @@ Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-v
 ### MATLAB Requirements
 - For `.m` files
 - Language version: R2018a and later versions should work fine.
-- Note all MATLAB files follow [this style guide](https://sites.google.com/site/matlabstyleguidelines/naming-conventions/variables). (TODO)
+- Note all MATLAB files follow [this style guide](https://sites.google.com/site/matlabstyleguidelines/naming-conventions/variables).
 
 ### MATLAB Installation
 Login to [Mathworks](https://www.mathworks.com/downloads/) and download the desired version.
