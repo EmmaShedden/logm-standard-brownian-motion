@@ -98,7 +98,7 @@ Login to [Mathworks](https://www.mathworks.com/downloads/) and download the desi
 - If you are affiliated with an educational institution, you might have been granted a license for downloading. Remember to use the email address of that institution when logging in. Otherwise, you need to select a license when downloading it to your desktop. You can either [buy a license](https://www.mathworks.com/pricing-licensing.html?s_tid=srchtitle_license_1) or [apply for a 30-day free trial](https://www.mathworks.com/campaigns/products/trials.html) on the official website.
 - You will be asked to select the products you need when downloading. It will be enough for this repo to only select MATLAB.
 
-## Usage (TODO)
+## Usage
 Usage instructions for all programs within this repository. Make sure you have completed the relevant installation for the files you want to run.
 
 All instructions begin in the command line at the top level of the repo.
@@ -166,9 +166,6 @@ Call function `simulation(N)` in the command line, where `N` refers to the numbe
 
 <p align="center"><img width="500" height="350" src="/series-representation/output/2048.png"></p>
 
-### Instructions (TODO: remove)
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
 ## Support
 If you encounter trouble running our code, you can email the following:
 - xiaoranc@umich.edu
@@ -185,11 +182,4 @@ __Instructors:__ Ahmad Barhoumi, Sam Hansen
 __Institution:__ University of Michigan
 
 ## Project status
-In development.
-
-### TODOs (Emma)
-- [ ] rename files
-- [x] get other stuff from Google Colab
-- [x] fix formatting & comments
-- [ ] all documentation
-- [ ] reorganize directory tree according to what simulation methods they're used for
+Completed.
