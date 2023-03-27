@@ -4,13 +4,13 @@
 Brownian motion [[1](http://galton.uchicago.edu/~lalley/Courses/313/WienerProcess.pdf), [2](https://en.wikipedia.org/wiki/Brownian_motion)] is a mathematical model for a common physical process which occurs in both the natural world and man-made systems. Common examples include the diffusion of small particles in a liquid or gas (as studied by [Albert Einstein](https://www.aps.org/publications/apsnews/200502/history.cfm)) and the movement of certain economic indices (as studied by [Louis Bachelier](https://en.wikipedia.org/wiki/Louis_Bachelier)). Thus, the simulation of Brownian motions is useful to support understanding of the mathematical process and contribute to its wide-ranging applications.
 
 This repository contains:
-- Implementations of the Random Walk (Jupyter Notebook) and Series Representation (MATLAB) simulation methods for standard Brownian motions.
-- Implementations of useful algorithms (Python, MATLAB) which our simulations rely on for efficiency over naive approaches.
-    - Tests of these implementations against standard library implementations in Scikit and Numpy.
+- Implementations of the [Random Walk](https://web.mit.edu/8.334/www/grades/projects/projects17/OscarMickelin/brownian.html) (Jupyter Notebook) and [Series Representation](https://drive.google.com/drive/folders/1g0kDwIkf7XvZOzbr6ovw6erXQCFbVk23) (MATLAB) simulation methods for standard Brownian motions.
+- Implementations of LU matrix decomposition, a useful algorithm which our simulations rely on for efficiency over naive approaches (Python, MATLAB).
+    - Randomized unit tests of these implementations.
     - These are for learning purposes; the standard library functions are used in our simulation code.
-- All installation and usage instructions start in the command line at the top level of this repository.
 
 ## Installation
+- Unless otherwise specified, installation instructions begin in the command line at the top level of the repo.
 
 ### Python Requirements
 - Language version: Any version of Python 3 should work fine.
@@ -37,7 +37,7 @@ For `.ipynb` files.
 2. Run `conda env list`. You should see a `base` environment with a filepath.
 3. Run `conda activate base` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
 4. Run `pip install ipykernel ipython jupyter jupyterlab`.
-5. Run `python3 -m ipykernel install --user --name=[choose-a-name-related-to-this-project]`. This starts a python kernel, using the current virtual environment, for the  Jupyter notebook to connect to.
+5. Run `python -m ipykernel install --user --name=[choose-a-name-related-to-this-project]`. This starts a python kernel, using the current virtual environment, for the  Jupyter notebook to connect to.
 6. Run `pip install -U "jupyter-server<2.0.0"`.
 7. Run `jupyter notebook`. Check for errors in the output and follow any instructions (e.g. missing packages) depending on your setup. You may need to repeat this command multiple times until all errors are resolved.
     - If you use WSL/WSL2 on Windows, run `jupyter notebook --port=8889 --no-browser` instead.
@@ -87,27 +87,25 @@ Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-v
 3. Code is ready to edit/run in VSCode via the `code` command (or VSCode Insiders via the `code-insiders` command).
 
 ### MATLAB Requirements
-
 - For `.m` files
 - Language version: R2018a and later versions should work fine.
 - Note all MATLAB files follow [this style guide](https://sites.google.com/site/matlabstyleguidelines/naming-conventions/variables). (TODO)
 
 ### MATLAB Installation
-
 Login to [Mathworks](https://www.mathworks.com/downloads/) and download the desired version.
 - If you are affiliated with an educational institution, you might have been granted a license for downloading. Remember to use the email address of that institution when logging in. Otherwise, you need to select a license when downloading it to your desktop. You can either [buy a license](https://www.mathworks.com/pricing-licensing.html?s_tid=srchtitle_license_1) or [apply for a 30-day free trial](https://www.mathworks.com/campaigns/products/trials.html) on the official website.
 - You will be asked to select the products you need when downloading. It will be enough for this repo to only select MATLAB.
 
-## Usage (TODO)
+## Usage
 Usage instructions for all programs within this repository. Make sure you have completed the relevant installation for the files you want to run.
 
 - Instructions for Python begin in the command line at the top level of the repo.
+- Depending on your setup, you might need to replace `python` with `python3` wherever this command occurs.
 - Instructions for MATLAB begin in the command window of the MATLAB you've downloaded, under the folder containing relevant `.m` files.
 
 ### LU Decomposition in Python
 1. Run `cd lu-decomp/`.
 2. Run `python main.py`.
-    - Depending on your setup, you might need to run `python3` instead.
 3. The code first tests the output LU decomposition of a hardcoded matrix, then on randomly generated matrices. Not every matrix has an LU decomposition; when our algorithm cannot find one, it raises an exception. Therefore, the output will reflect the number of randomly generated matrices which admitted LU decompositions (this will be different every time you run the program), and end in an exception.
     - The test suite includes both square and rectangular matrices, but we restrict the difference between dimensions because very tall or wide matrices are unlikely to have LU decompositions.
 4. To change the test code, open `main.py` in an editor and scroll down to the definition of `main()`. Here, you can change the values of the hardcoded matrix, add more hardcoded tests, or change the parameters of random matrix generation.
@@ -117,28 +115,28 @@ Usage instructions for all programs within this repository. Make sure you have c
 2. Call function `[L,U] = LU_decomposition(A)` in the command window.
 3. If A has a LU Decomposition, returns the lower triangular matrix L and the upper triangular matrix U for the LU decomposition of A; otherwise returns `undefined`.
 
-#### EXAMPLE
+#### Example
 Input:\
-A=
+
 ```math
-\begin{pmatrix}
+A=\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 7 & 8 & 9 \\
 \end{pmatrix}
 ```
 Output:\
-L=
+
 ```math
-\begin{pmatrix}
+L=\begin{pmatrix}
 1 & 0 & 0 \\
 4 & 1 & 0 \\
 7 & 2 & 1 \\
 \end{pmatrix}
 ```
-U=
+
 ```math
-\begin{pmatrix}
+U=\begin{pmatrix}
 1 & 2 & 3 \\
 0 & -3 & -6 \\
 0 & 0 & 0 \\
@@ -154,6 +152,7 @@ U=
 5. If you choose to store the output graphs, they can be found in `[path-to-repo]/random-walk/output/`. You can view them in your IDE or any image viewer.
     - Extra information on how to interpret output graphs can be found in inline comments in the code.
 
+#### Example output
 <p align="center"><img width="700" src="/random-walk/output/brownian-motion/one-plot.png"></p>
 
 ### Series Representation in MATLAB
@@ -166,9 +165,6 @@ Call function `simulation(N)` in the command line, where `N` refers to the numbe
 2. N = 2048:
 
 <p align="center"><img width="500" height="350" src="/series-representation/output/2048.png"></p>
-
-### Instructions (TODO: remove)
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
 
 ## Support
 If you encounter trouble running our code, you can email the following:
@@ -186,11 +182,4 @@ __Instructors:__ Ahmad Barhoumi, Sam Hansen
 __Institution:__ University of Michigan
 
 ## Project status
-In development.
-
-### TODOs (Emma)
-- [ ] rename files
-- [x] get other stuff from Google Colab
-- [x] fix formatting & comments
-- [ ] all documentation
-- [ ] reorganize directory tree according to what simulation methods they're used for
+Completed.
