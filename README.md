@@ -160,8 +160,10 @@ Call function `simulation(N)` in the command line, where `N` refers to the numbe
 
 #### Example
 1. N = 128:
+
 <p align="center"><img width="500" height="350" src="/series-representation/output/128.png"></p>
 2. N = 2048:
+
 <p align="center"><img width="500" height="350" src="/series-representation/output/2048.png"></p>
 
 ### Instructions (TODO: remove)
