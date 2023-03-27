@@ -111,6 +111,39 @@ All instructions begin in the command line at the top level of the repo.
     - The test suite includes both square and rectangular matrices, but we restrict the difference between dimensions because very tall or wide matrices are unlikely to have LU decompositions.
 4. To change the test code, open `main.py` in an editor and scroll down to the definition of `main()`. Here, you can change the values of the hardcoded matrix, add more hardcoded tests, or change the parameters of random matrix generation.
 
+### LU Decomposition in MATLAB 
+1. Enter a nonsingular square matrix A you want to test in the command window.
+2. Call function `[L,U] = LU_decomposition(A)` in the command window.
+3. If A has a LU Decomposition, returns the lower triangular matrix L and the upper triangular matrix U for the LU decomposition of A; otherwise returns `undefined`.
+
+#### EXAMPLE
+Input:\
+A=
+```math
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9 \\
+\end{pmatrix}
+```
+Output:\
+L=
+```math
+\begin{pmatrix}
+1 & 0 & 0 \\
+4 & 1 & 0 \\
+7 & 2 & 1 \\
+\end{pmatrix}
+```
+U=
+```math
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & -3 & -6 \\
+0 & 0 & 0 \\
+\end{pmatrix}
+```
+
 ### Random Walk in Python
 1. Run `cd random-walk`.
 2. Refer to the instructions for your choice of installation in order to open `main.ipynb`.
