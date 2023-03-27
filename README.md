@@ -160,9 +160,9 @@ Call function `simulation(N)` in the command line, where `N` refers to the numbe
 
 #### Example
 1. N = 128:\
-![截屏2023-03-25_23.14.33](/uploads/cb2eaa62a7fdea5aa63cb2f1c51a3365/截屏2023-03-25_23.14.33.png){width = 25px height = 25px}
+<p align="center"><img width="700" src="/series-representation/output/128.png"></p>
 2. N = 2048:\
-![截屏2023-03-25_23.21.15](/uploads/0989bc38a423f3a85585af0da72cdb54/截屏2023-03-25_23.21.15.png){width = 25px height = 25px}
+<p align="center"><img width="700" src="/series-representation/output/2048.png"></p>
 
 ### Instructions (TODO: remove)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
