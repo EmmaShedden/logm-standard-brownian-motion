@@ -159,10 +159,10 @@ U=
 Call function `simulation(N)` in the command line, where `N` refers to the number of summands you want.
 
 #### Example
-1. N = 128:\
-<p align="center"><img width="400" height="400" src="/series-representation/output/128.png"></p>
-2. N = 2048:\
-<p align="center"><img width="400" height="400" src="/series-representation/output/2048.png"></p>
+1. N = 128:
+<p align="center"><img width="500" height="350" src="/series-representation/output/128.png"></p>
+2. N = 2048:
+<p align="center"><img width="500" height="350" src="/series-representation/output/2048.png"></p>
 
 ### Instructions (TODO: remove)
 Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
