@@ -1,4 +1,4 @@
-# Series Representation Algorithm
+# Series Representation for Standard Brownian Motion
 
 ## Mathematical Fundation
 Source: [_Brownian Motion_, J. Michael Steele](https://link.springer.com/chapter/10.1007/978-1-4684-9305-4_3)
