@@ -1,9 +1,8 @@
-# LU Decomposition Algorithm
+# LU Decomposition
 
 ## Mathematical Fundation
 Source: [_LU Decomposition_](https://www.math.ucdavis.edu/~linear/old/notes11.pdf)
 
-### LU Decomposition
 Each nonsigular square matrix can be diagonalized by row operations and column operations (i.e. exists a lower triangular matrix L', a upper
 triangular matrix U' s.t. L' * A * U' = D in which D is a diagonal matrix)
 Given that the inverse of a lower triangular matrix is still a lower triangular matrix, so does upper triangular matrix, $L'^{-1}$ is the desired
