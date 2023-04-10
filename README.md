@@ -36,7 +36,7 @@ For `.ipynb` files.
 1. Run `pip install conda` if you don't already have it.
 2. Run `conda env list`. You should see a `base` environment with a filepath.
 3. Run `conda activate base` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
-4. Run `pip install ipykernel ipython jupyter jupyterlab`.
+4. Run `pip install ipykernel ipython jupyter jupyterla numpy matplotlib scipy pandas PyWavelets`.
 5. Run `python -m ipykernel install --user --name=[choose-a-name-related-to-this-project]`. This starts a python kernel, using the current virtual environment, for the  Jupyter notebook to connect to.
 6. Run `pip install -U "jupyter-server<2.0.0"`.
 7. Run `jupyter notebook`. Check for errors in the output and follow any instructions (e.g. missing packages) depending on your setup. You may need to repeat this command multiple times until all errors are resolved.
@@ -84,7 +84,8 @@ Source: [This guide](https://devinschumacher.com/how-to-setup-jupyter-notebook-v
     - Open VSCode using `code-insiders [path-to-directory]`. Follow the prompts to choose a kernel and install necessary packages. See this [resource](https://stackoverflow.com/questions/60025150/jupyter-notebooks-in-vs-code-using-wsl-2-are-not-working) for more info.
     - If the prompt to install `ipykernel` loops, go to the command line (in the environment you are using as your kernel) and make sure both `ipython` and `ipykernel` are installed.
     - If the prompt to select a kernel hangs, double-check that your `python`, `iPython`, and `ipykernel` installations worked and have the versions you expect. You may need to uninstall, reinstall and upgrade them. Then, click on the WSL-Ubuntu icon in the bottom left corner -> Connect to WSL using Distro -> Select the default distro -> Navigate to the top level of the repository and open it.
-3. Code is ready to edit/run in VSCode via the `code` command (or VSCode Insiders via the `code-insiders` command).
+3. In the terminal, run `pip install numpy matplotlib scipy pandas PyWavelets`.
+4. Code is ready to edit/run in VSCode via the `code` command (or VSCode Insiders via the `code-insiders` command).
 
 ### MATLAB Requirements
 - For `.m` files
