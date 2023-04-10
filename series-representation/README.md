@@ -1,4 +1,4 @@
-# Series Representation for Standard Brownian Motion
+# Series Representation of Standard Brownian Motion
 
 ## Mathematical Fundation
 Source: [_Brownian Motion_, J. Michael Steele](https://link.springer.com/chapter/10.1007/978-1-4684-9305-4_3)
@@ -20,7 +20,7 @@ in which
 \Delta_n(t) = \Delta(2^j t - k) \quad \text{for} \quad n = 2^j + k, \quad \text{where} \quad i \ge 0 \quad \text{and} \quad 0 \le k < 2^j
 ```
 
-## Realization
+## Simulation
 
 ### Remark
 - We only simulate $X_t$ for finite summands
