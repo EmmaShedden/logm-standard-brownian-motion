@@ -23,5 +23,11 @@ in which
 ## Simulation
 
 ### Remark
-- We only simulate $X_t$ for finite summands
-- We dicretize the time interval [0,1] and only simulate $X_t$ on a set of timestamps
+- We only simulate $X_t$ for finite summands.
+- We dicretize the time interval [0,1] and only simulate $X_t$ on a set of timestamps.
+
+### Algorithm
+- Compute coefficients $\lambda_n's$ based on the formula.
+- Simulate triangular wavelets $\Delta(t)$ and then use scaling to obtain $\Delta_n(t)'s$.
+- Generate standard normal random variables $Z_n's$.
+- Compute the summation of the products.
