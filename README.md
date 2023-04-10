@@ -14,7 +14,7 @@ This repository contains:
 
 ### Python Requirements
 - Language version: Any version of Python 3 should work fine.
-- Packages: `numpy`, `matplotlib`, `scipy`, `pandas`
+- Packages: `numpy`, `matplotlib`, `scipy`, `pandas`, `PyWavelets`
 - Visualization: Graphics are not supported by default on WSL; this may be an issue on other setups as well. To be able to generate graphs and other visualizations, it may be necessary to set up X-11 forwarding. Consider XLaunch from SourceForge via [VcXsrv](https://sourceforge.net/projects/vcxsrv/) or [Xming](https://sourceforge.net/projects/xming/).
 
 Note for installation: Throughout, you may need to replace `pip` with `pip3` depending on your setup. If your `pip` still points to Python 2 (you can check by running `pip -V`), then use `pip3` instead.
