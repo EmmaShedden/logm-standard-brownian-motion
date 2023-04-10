@@ -4,7 +4,7 @@
 Brownian motion [[1](http://galton.uchicago.edu/~lalley/Courses/313/WienerProcess.pdf), [2](https://en.wikipedia.org/wiki/Brownian_motion)] is a mathematical model for a common physical process which occurs in both the natural world and man-made systems. Common examples include the diffusion of small particles in a liquid or gas (as studied by [Albert Einstein](https://www.aps.org/publications/apsnews/200502/history.cfm)) and the movement of certain economic indices (as studied by [Louis Bachelier](https://en.wikipedia.org/wiki/Louis_Bachelier)). Thus, the simulation of Brownian motions is useful to support understanding of the mathematical process and contribute to its wide-ranging applications.
 
 This repository contains:
-- Implementations of the [Random Walk](https://web.mit.edu/8.334/www/grades/projects/projects17/OscarMickelin/brownian.html) (Jupyter Notebook) and [Series Representation](https://drive.google.com/drive/folders/1g0kDwIkf7XvZOzbr6ovw6erXQCFbVk23) (MATLAB) simulation methods for standard Brownian motions.
+- Implementations of the [Random Walk](https://web.mit.edu/8.334/www/grades/projects/projects17/OscarMickelin/brownian.html) (Jupyter Notebook) and [Series Representation](https://link.springer.com/chapter/10.1007/978-1-4684-9305-4_3) (MATLAB) simulation methods for standard Brownian motions.
 - Implementations of LU matrix decomposition, a useful algorithm which our simulations rely on for efficiency over naive approaches (Python, MATLAB).
     - Randomized unit tests of these implementations.
     - These are for learning purposes; the standard library functions are used in our simulation code.
