@@ -36,7 +36,7 @@ For `.ipynb` files.
 1. Run `pip install conda` if you don't already have it.
 2. Run `conda env list`. You should see a `base` environment with a filepath.
 3. Run `conda activate base` to activate the virtual environment. Alternatively, you can create and use a different virtual environment for this project.
-4. Run `pip install ipykernel ipython jupyter jupyterla numpy matplotlib scipy pandas PyWavelets`.
+4. Run `pip install ipykernel ipython jupyter jupyterlab numpy matplotlib scipy pandas PyWavelets`.
 5. Run `python -m ipykernel install --user --name=[choose-a-name-related-to-this-project]`. This starts a python kernel, using the current virtual environment, for the  Jupyter notebook to connect to.
 6. Run `pip install -U "jupyter-server<2.0.0"`.
 7. Run `jupyter notebook`. Check for errors in the output and follow any instructions (e.g. missing packages) depending on your setup. You may need to repeat this command multiple times until all errors are resolved.
